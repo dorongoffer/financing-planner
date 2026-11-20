@@ -1,0 +1,6 @@
+# Public constants allowed to appear in tracked files even though they are also in defaults.local.json
+5008000
+1978745
+2347040
+6055070
+20183565

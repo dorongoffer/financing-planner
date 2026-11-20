@@ -1,0 +1,58 @@
+{
+  "format": "financing-planner/defaults-1",
+  "inputs": {
+    "sale": {
+      "enabled": true,
+      "salePrice": 6000000,
+      "mortgagePayoff": 400000,
+      "sellerLawyerPct": 0.005,
+      "vatPct": 0.18,
+      "realtorEnabled": false,
+      "realtorPct": 0.01,
+      "purchasePrice": 4000000,
+      "cpiFactor": 1.15,
+      "purchaseTaxPaid": 120000,
+      "otherDeductibles": 25000,
+      "improvements": 0,
+      "exemptionCeiling": 5008000,
+      "capitalGainsRate": 0.25
+    },
+    "rsu": { "enabled": true, "valueUsd": 200000, "usdIls": 3.5, "taxRate": 0.35 },
+    "studyFunds": [
+      { "id": "sf1", "holder": "בן זוג א", "name": "קרן א", "amount": 240000, "enabled": true },
+      { "id": "sf2", "holder": "בן זוג א", "name": "קרן ב", "amount": 40000, "enabled": true },
+      { "id": "sf3", "holder": "בת זוג ב", "name": "קרן ג", "amount": 90000, "enabled": true }
+    ],
+    "savings": [
+      { "id": "sv1", "name": "פוליסת חיסכון", "gross": 400000, "taxableGain": 80000, "taxRate": 0.25, "enabled": true },
+      { "id": "sv2", "name": "גמל להשקעה", "gross": 70000, "taxableGain": 5000, "taxRate": 0.25, "enabled": true },
+      { "id": "sv3", "name": "חיסכון של הילד", "gross": 60000, "taxableGain": 0, "taxRate": 0, "enabled": false }
+    ],
+    "custom": [],
+    "purchase": { "price": 5000000, "taxMode": "single", "buyerLawyerPct": 0.005, "vatPct": 0.18, "realtorPct": 0, "misc": 12000 },
+    "renovation": {
+      "level": "mid",
+      "contingencyPct": 0.25,
+      "contingencyIncludesRent": false,
+      "items": [
+        { "id": "r1", "name": "שיפוץ קומת קרקע", "low": 400000, "mid": 550000, "high": 700000, "override": null, "isTemporaryRent": false },
+        { "id": "r2", "name": "תשתיות", "low": 20000, "mid": 45000, "high": 80000, "override": null, "isTemporaryRent": false },
+        { "id": "r3", "name": "תוספת קומה", "low": 700000, "mid": 900000, "high": 1200000, "override": null, "isTemporaryRent": false },
+        { "id": "r4", "name": "מקצועיים והיתרים", "low": 100000, "mid": 180000, "high": 260000, "override": null, "isTemporaryRent": false },
+        { "id": "r5", "name": "שכירות זמנית", "low": 0, "mid": 140000, "high": 210000, "override": null, "isTemporaryRent": true }
+      ]
+    },
+    "cashReserve": 240000,
+    "mortgage": { "annualRate": 0.05, "termYears": 25, "ltvCap": 0.7 }
+  },
+  "presets": [
+    { "name": "פסימי", "overrides": { "sale.salePrice": 5900000, "renovation.level": "high", "rsu.usdIls": 3.4, "rsu.taxRate": 0.4 } },
+    { "name": "ריאלי", "overrides": {} },
+    { "name": "אופטימי", "overrides": { "sale.salePrice": 6100000, "renovation.level": "low", "rsu.usdIls": 3.6, "rsu.taxRate": 0.3 } }
+  ],
+  "notes": {
+    "studyFunds": "דוגמה: נתונים מדוחות ישנים יותר.",
+    "cpiFactor": "לאמת מול מדד המחירים לצרכן בפועל.",
+    "purchaseTax": "לאמת את מדרגות המס מול רשות המסים."
+  }
+}

@@ -1,0 +1,18 @@
+node_modules/
+dist/
+dist-server/
+dist-types/
+coverage/
+*.tsbuildinfo
+.DS_Store
+*.log
+.env*
+
+# Real numbers never enter git
+data/defaults.local.json
+data/scenarios.json
+data/*.bak
+test-results/
+screenshots/
+data/*.local.json
+.claude/
